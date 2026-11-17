@@ -1,0 +1,280 @@
+[
+  {
+    "id": 1,
+    "name": "Oversized Zoro",
+    "slug": "zoro",
+    "price": 89.8,
+    "description": "Dead or Alive: ฿ 1.111.000.000. O ex-caçador de piratas que se tornou o pesadelo da Marinha com uma das cabeças mais valiosas do Novo Mundo.",
+    "cor_principal": "preto",
+    "category_ids": [
+      2,
+      6
+    ],
+    "images": [
+      "zoro.jpg",
+      "zoro-frente.jpg",
+      "zoro-branca.jpg",
+      "zoro-branca-frente.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Oversized Luffy",
+    "slug": "luffy",
+    "price": 89.8,
+    "description": "Dead or Alive: ฿ 3.000.000.000. O sorriso que a Marinha tentou apagar e a recompensa que consagrou o novo Imperador dos Mares.",
+    "cor_principal": "branco",
+    "category_ids": [
+      2,
+      6
+    ],
+    "images": [
+      "luffy.jpg",
+      "luffy-frente.jpg",
+      "luffy-preta.jpg",
+      "luffy-preta-frente.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Oversized Loki",
+    "slug": "loki",
+    "price": 89.8,
+    "description": "“Eu sou o Deus do Sol que trará o fim deste mundo.” A lenda colossal do reino dos gigantes forjada em uma estética nórdica sombria e urbana.",
+    "cor_principal": "preto",
+    "category_ids": [
+      2,
+      6
+    ],
+    "images": [
+      "loki.jpg",
+      "loki-frente.jpg",
+      "loki-branca.jpg",
+      "loki-branca-frente.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Oversized Cell Perfect Form",
+    "slug": "cell",
+    "price": 109.9,
+    "description": "A forma definitiva do vilão mais icônico da saga androide traduzida em pura estética streetwear.",
+    "cor_principal": "preto",
+    "category_ids": [
+      1,
+      7
+    ],
+    "images": [
+      "cell.jpg",
+      "cell-frente.jpg",
+      "cell-branca.jpg",
+      "cell-branca-frente.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Oversized Kakaroto",
+    "slug": "kakaroto",
+    "price": 109.9,
+    "description": "O poder lendário de Kakaroto traduzido no peso e na atitude do streetwear.",
+    "cor_principal": "preto",
+    "category_ids": [
+      1,
+      7
+    ],
+    "images": [
+      "kakaroto.jpg",
+      "kakaroto-frente.jpg",
+      "kakaroto-branca.jpg",
+      "kakaroto-branca-frente.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Oversized Freeza",
+    "slug": "freeza",
+    "price": 109.9,
+    "description": "Crueldade calculada e soberania galáctica em um corte refinado.",
+    "cor_principal": "branco",
+    "category_ids": [
+      1,
+      7
+    ],
+    "images": [
+      "freeza.jpg",
+      "freeza-frente.jpg",
+      "freeza-preta.jpg",
+      "freeza-preta-frente.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Oversized Boo",
+    "slug": "boo",
+    "price": 109.9,
+    "description": "Sem razão, sem remorso, sem plano. Apenas o caos primordial em sua forma mais destrutiva.",
+    "cor_principal": "preto",
+    "category_ids": [
+      1
+    ],
+    "images": [
+      "boo.jpg",
+      "boo-frente.jpg",
+      "boo-branca.jpg",
+      "boo-branca-frente.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Oversized Vegeta",
+    "slug": "vegeta",
+    "price": 109.9,
+    "description": "A imponência e a determinação do Príncipe dos Saiyajins em uma peça desenhada para o streetwear.",
+    "cor_principal": "preto",
+    "category_ids": [
+      1
+    ],
+    "images": [
+      "vegeta.jpg",
+      "vegeta-frente.jpg",
+      "vegeta-branca.jpg",
+      "vegeta-branca-frente.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Oversized Gohan",
+    "slug": "gohan",
+    "price": 109.9,
+    "description": "Cuidado com a fúria silenciosa de quem odeia lutar. Uma peça com corte oversized e caimento estruturado de alta gramatura, projetada para se destacar com presença natural.",
+    "cor_principal": "preto",
+    "category_ids": [
+      1
+    ],
+    "images": [
+      "gohan.jpg",
+      "gohan-frente.jpg",
+      "gohan-branca.jpg",
+      "gohan-branca-frente.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Oversized Itachi",
+    "slug": "itachi",
+    "price": 109.9,
+    "description": "Viver na escuridão para proteger a luz. O peso do mundo, da desonra e do sacrifício carregados em silêncio sob o bater de asas dos corvos.",
+    "cor_principal": "preto",
+    "category_ids": [
+      3
+    ],
+    "images": [
+      "itachi.jpg",
+      "itachi-frente.jpg",
+      "itachi-branca.jpg",
+      "itachi-branca-frente.jpg"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Oversized Sharingan Clan",
+    "slug": "sharingan-clan",
+    "price": 109.9,
+    "description": "Shisui, Itachi, Sasuke, Madara e Obito. Cinco caminhos moldados pela dor, pelo sacrifício e pelo poder dos olhos que reescrevem o destino.",
+    "cor_principal": "preto",
+    "category_ids": [
+      3
+    ],
+    "images": [
+      "sharingan-clan.jpg",
+      "sharingan-clan-frente.jpg",
+      "sharingan-clan-branca.jpg",
+      "sharingan-clan-branca-frente.jpg"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Oversized Maki Zenin",
+    "slug": "maki-zenin",
+    "price": 89.9,
+    "description": "Cicatrizes que contam a história de quem sobreviveu ao inferno para destruí-lo. Sem energia amaldiçoada, mas com a fúria física absoluta que colocou um clã inteiro de joelhos.",
+    "cor_principal": "preto",
+    "category_ids": [
+      4
+    ],
+    "images": [
+      "maki-zenin.jpg",
+      "maki-zenin-frente.jpg",
+      "maki-zenin-branca.jpg",
+      "maki-zenin-branca-frente.jpg"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Oversized Rei das Maldições",
+    "slug": "rei-das-maldicoes",
+    "price": 89.9,
+    "description": "Um corpo dividido, duas vontades colidindo. Quando as marcas escuras sobem pela pele, o herói dá lugar ao terror absoluto do Rei das Maldições.",
+    "cor_principal": "branco",
+    "category_ids": [
+      4
+    ],
+    "images": [
+      "rei-das-maldicoes.jpg",
+      "rei-das-maldicoes-frente.jpg",
+      "rei-das-maldicoes-preta.jpg",
+      "rei-das-maldicoes-preta-frente.jpg"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Oversized Sukuna vs Gojo",
+    "slug": "sukuna-vs-gojo",
+    "price": 89.9,
+    "description": "“Você é o mais forte porque é Satoru Gojo, ou é Satoru Gojo porque é o mais forte?” O choque definitivo entre o Infinito e o Santuário Malevolente em uma estampa de presença absoluta.",
+    "cor_principal": "preto",
+    "category_ids": [
+      4
+    ],
+    "images": [
+      "sukuna-vs-gojo.jpg",
+      "sukuna-vs-gojo-frente.jpg",
+      "sukuna-vs-gojo-branca.jpg",
+      "sukuna-vs-gojo-branca-frente.jpg"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Oversized Levi Ackerman",
+    "slug": "levi",
+    "price": 89.9,
+    "description": "O Soldado Mais Forte da Humanidade em uma estampa de alto impacto visual que traduz a agilidade e a determinação cega do Capitão.",
+    "cor_principal": "branco",
+    "category_ids": [
+      5
+    ],
+    "images": [
+      "levi.jpg",
+      "levi-frente.jpg",
+      "levi-preta.jpg",
+      "levi-preta-frente.jpg"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Oversized Asas da Liberdade",
+    "slug": "asas-da-liberdade",
+    "price": 89.9,
+    "description": "Se você não lutar, você não pode vencer. Dediquem seus corações! O peso de carregar nos ombros as asas daqueles que derramaram seu sangue em busca da verdadeira liberdade. TATAKAE!",
+    "cor_principal": "preto",
+    "category_ids": [
+      5
+    ],
+    "images": [
+      "asas.jpg",
+      "asas-frente.jpg",
+      "asas-branca.jpg",
+      "asas-branca-frente.jpg"
+    ]
+  }
+]

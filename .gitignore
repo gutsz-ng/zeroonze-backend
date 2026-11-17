@@ -1,0 +1,17 @@
+# Pacotes baixados pelo "npm install" (qualquer um recria com o comando)
+node_modules/
+
+# Senhas e configurações locais
+.env
+
+# Relatórios de teste
+coverage/
+
+# Imagens enviadas pela API (cada produto ganha uma pasta product-<id>).
+# As fotos de exemplo em public/media/produtos continuam no repositório.
+public/media/product-*/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+*.log

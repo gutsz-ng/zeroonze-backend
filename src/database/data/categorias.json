@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Dragon Ball",
+    "slug": "dragon-ball",
+    "use_in_menu": true
+  },
+  {
+    "id": 2,
+    "name": "One Piece",
+    "slug": "one-piece",
+    "use_in_menu": true
+  },
+  {
+    "id": 3,
+    "name": "Naruto",
+    "slug": "naruto",
+    "use_in_menu": true
+  },
+  {
+    "id": 4,
+    "name": "Jujutsu Kaisen",
+    "slug": "jujutsu-kaisen",
+    "use_in_menu": true
+  },
+  {
+    "id": 5,
+    "name": "Attack on Titan",
+    "slug": "attack-on-titan",
+    "use_in_menu": true
+  },
+  {
+    "id": 6,
+    "name": "Lançamentos",
+    "slug": "lancamentos",
+    "use_in_menu": false
+  },
+  {
+    "id": 7,
+    "name": "Destaques",
+    "slug": "destaques",
+    "use_in_menu": false
+  }
+]

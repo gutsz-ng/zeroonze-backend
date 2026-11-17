@@ -1,0 +1,162 @@
+### =====================================================================
+### Requisições prontas para testar a API pelo VS Code.
+### 1. Instale a extensão "REST Client" (autor: Huachao Mao).
+### 2. Ligue a API com: npm run dev
+### 3. Clique em "Send Request", que aparece em cima de cada bloco.
+### Os blocos são separados por "###".
+### =====================================================================
+
+@api = http://localhost:3000
+
+### ---------------------------------------------------------------------
+### 1) LOGIN: rode este primeiro. O token fica guardado em {{token}}.
+### ---------------------------------------------------------------------
+# @name login
+POST {{api}}/v1/user/token
+Content-Type: application/json
+
+{
+  "email": "admin@zeroonze.com",
+  "password": "123@123"
+}
+
+###
+@token = {{login.response.body.token}}
+
+
+### ---------------------------------------------------------------------
+### USUÁRIOS
+### ---------------------------------------------------------------------
+
+### Cadastrar (público)
+POST {{api}}/v1/user
+Content-Type: application/json
+
+{
+  "firstname": "Gustavo",
+  "surname": "Nogueira",
+  "email": "gustavo@zeroonze.com",
+  "password": "123@123",
+  "confirmPassword": "123@123"
+}
+
+### Ver um usuário
+GET {{api}}/v1/user/1
+
+### Atualizar a própria conta (precisa do token)
+PUT {{api}}/v1/user/1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "firstname": "Administrador"
+}
+
+### Tentar alterar SEM token -> 400
+PUT {{api}}/v1/user/1
+Content-Type: application/json
+
+{
+  "firstname": "Sem token"
+}
+
+
+### ---------------------------------------------------------------------
+### CATEGORIAS
+### ---------------------------------------------------------------------
+
+### Todas as categorias do menu
+GET {{api}}/v1/category/search?limit=-1&use_in_menu=true
+
+### Só nome e slug, 3 por página, página 2
+GET {{api}}/v1/category/search?fields=name,slug&limit=3&page=2
+
+### Uma categoria
+GET {{api}}/v1/category/1
+
+### Criar
+POST {{api}}/v1/category
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Demon Slayer",
+  "slug": "demon-slayer",
+  "use_in_menu": true
+}
+
+### Atualizar (troque o 8 pelo id criado acima)
+PUT {{api}}/v1/category/8
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Demon Slayer (Kimetsu no Yaiba)"
+}
+
+### Excluir
+DELETE {{api}}/v1/category/8
+Authorization: Bearer {{token}}
+
+
+### ---------------------------------------------------------------------
+### PRODUTOS
+### ---------------------------------------------------------------------
+
+### Primeira página (12 produtos)
+GET {{api}}/v1/product/search
+
+### Procurar "Kakaroto" no nome ou na descrição
+GET {{api}}/v1/product/search?match=Kakaroto
+
+### Dragon Ball (1) entre R$ 100 e R$ 120, só alguns campos
+GET {{api}}/v1/product/search?category_ids=1&price-range=100-120&fields=id,name,price
+
+### Produtos cuja opção 1 (Tamanho do Zoro) tem GG
+GET {{api}}/v1/product/search?option[1]=GG
+
+### Um produto completo
+GET {{api}}/v1/product/1
+
+### Criar um produto (a imagem é um PNG de 1 pixel em base64)
+POST {{api}}/v1/product
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "enabled": true,
+  "name": "Oversized Tanjiro",
+  "slug": "tanjiro",
+  "stock": 10,
+  "description": "Respiração da Água, Primeira Forma.",
+  "price": 99.9,
+  "price_with_discount": 89.9,
+  "category_ids": [7],
+  "images": [
+    {
+      "type": "image/png",
+      "content": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+    }
+  ],
+  "options": [
+    { "title": "Tamanho", "shape": "square", "radius": "4px", "type": "text", "values": ["P", "M", "G", "GG"] },
+    { "title": "Cor", "shape": "circle", "type": "color", "values": ["#000000", "#FFFFFF"] }
+  ]
+}
+
+### Atualizar o produto 1: preço, estoque e uma opção nova
+PUT {{api}}/v1/product/1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "stock": 30,
+  "price_with_discount": 79.9,
+  "options": [
+    { "title": "Tecido", "shape": "square", "type": "text", "values": ["100% algodão"] }
+  ]
+}
+
+### Excluir o produto 17 (o Tanjiro criado acima)
+DELETE {{api}}/v1/product/17
+Authorization: Bearer {{token}}

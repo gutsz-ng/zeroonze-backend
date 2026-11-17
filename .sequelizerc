@@ -1,0 +1,11 @@
+// Este arquivo diz ao "sequelize-cli" (a ferramenta de linha de comando
+// que roda as migrations e os seeders) onde ficam as pastas do projeto.
+// Sem ele, o CLI procuraria tudo na raiz, e queremos tudo dentro de src/.
+const path = require("path");
+
+module.exports = {
+  config: path.resolve("src", "config", "database.js"),
+  "models-path": path.resolve("src", "models"),
+  "migrations-path": path.resolve("src", "database", "migrations"),
+  "seeders-path": path.resolve("src", "database", "seeders"),
+};
