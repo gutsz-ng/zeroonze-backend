@@ -4,8 +4,6 @@ API REST da loja **ZeroOnze**, que vende camisetas oversized de anime. Ela cuida
 
 O front-end da loja está em [gutsz-ng/zeroonze-geekstrt](https://github.com/gutsz-ng/zeroonze-geekstrt). O banco já vem com as **16 camisetas do site**, com fotos, preços e descrições.
 
-> Quer entender o porquê de cada parte? Leia o **[APRENDA.md](APRENDA.md)**, um guia de estudo que explica o projeto do zero.
-
 ---
 
 ## 1. Tecnologias
@@ -28,24 +26,24 @@ O front-end da loja está em [gutsz-ng/zeroonze-geekstrt](https://github.com/gut
 ## 2. Requisitos atendidos
 
 **Funcionalidades essenciais**
-- ✅ Todos os endpoints do projeto de referência, com os códigos HTTP pedidos (200, 201, 204, 400, 401, 404)
-- ✅ CRUD completo de usuários, categorias e produtos
-- ✅ Autenticação com JWT em todos os POST, PUT e DELETE (exceto cadastro e login)
-- ✅ Autorização: cada usuário só altera ou exclui a própria conta (403)
-- ✅ Tratamento de erros centralizado, sempre no formato `{ "error": "...", "details": [...] }`
+- Todos os endpoints do projeto de referência, com os códigos HTTP pedidos (200, 201, 204, 400, 401, 404)
+- CRUD completo de usuários, categorias e produtos
+- Autenticação com JWT em todos os POST, PUT e DELETE (exceto cadastro e login)
+- Autorização: cada usuário só altera ou exclui a própria conta (403)
+- Tratamento de erros centralizado, sempre no formato `{ "error": "...", "details": [...] }`
 
 **Qualidade do código**
-- ✅ Padrão MVC com camada de *services* (Model → Service → Controller → Route)
-- ✅ Código comentado em português, explicando o porquê de cada decisão
+- Padrão MVC com camada de *services* (Model → Service → Controller → Route)
+- Código comentado em português, explicando o porquê de cada decisão
 
 **Banco de dados**
-- ✅ 6 tabelas criadas por *migrations*, com chaves estrangeiras e `CASCADE`
-- ✅ Relacionamentos 1:N (imagens e opções) e N:N (categorias)
-- ✅ Consultas com `include` (evita o problema N+1), paginação e transações
+- 6 tabelas criadas por *migrations*, com chaves estrangeiras e `CASCADE`
+- Relacionamentos 1:N (imagens e opções) e N:N (categorias)
+- Consultas com `include` (evita o problema N+1), paginação e transações
 
 **Documentação**
-- ✅ Swagger em `/docs`
-- ✅ Guia de setup neste README, guia de estudo no `APRENDA.md` e exemplos em `requests.http`
+- Swagger em `/docs`
+- Guia de setup neste README e exemplos em `requests.http`
 
 ## 3. Estrutura de pastas
 
@@ -70,8 +68,7 @@ zeroonze-backend/
 ├── tests/               # testes automatizados (Jest)
 ├── .env.example         # modelo do .env
 ├── .sequelizerc         # diz ao Sequelize CLI onde ficam as pastas
-├── requests.http        # requisições prontas para testar no VS Code
-├── APRENDA.md           # guia de estudo
+├── requests.http        # requisições prontas para testar no vs Code
 └── package.json
 ```
 
@@ -147,7 +144,7 @@ Pronto:
 
 ## 6. Endpoints
 
-🔒 = precisa do cabeçalho `Authorization: Bearer <token>`
+ = precisa do cabeçalho `Authorization: Bearer <token>`
 
 ### Usuários
 | Método | Rota | Descrição | Sucesso |
@@ -155,26 +152,26 @@ Pronto:
 | GET | `/v1/user/:id` | Dados do usuário (sem a senha) | 200 |
 | POST | `/v1/user` | Cadastro | 201 |
 | POST | `/v1/user/token` | Login: devolve o token JWT | 200 |
-| PUT 🔒 | `/v1/user/:id` | Atualiza nome, sobrenome e e-mail (só a própria conta) | 204 |
-| DELETE 🔒 | `/v1/user/:id` | Exclui a conta (só a própria) | 204 |
+| PUT  | `/v1/user/:id` | Atualiza nome, sobrenome e e-mail (só a própria conta) | 204 |
+| DELETE  | `/v1/user/:id` | Exclui a conta (só a própria) | 204 |
 
 ### Categorias
 | Método | Rota | Descrição | Sucesso |
 |---|---|---|---|
 | GET | `/v1/category/search` | Lista: `limit`, `page`, `fields`, `use_in_menu` | 200 |
 | GET | `/v1/category/:id` | Uma categoria | 200 |
-| POST 🔒 | `/v1/category` | Cria | 201 |
-| PUT 🔒 | `/v1/category/:id` | Atualiza | 204 |
-| DELETE 🔒 | `/v1/category/:id` | Exclui | 204 |
+| POST | `/v1/category` | Cria | 201 |
+| PUT | `/v1/category/:id` | Atualiza | 204 |
+| DELETE | `/v1/category/:id` | Exclui | 204 |
 
 ### Produtos
 | Método | Rota | Descrição | Sucesso |
 |---|---|---|---|
 | GET | `/v1/product/search` | Lista com filtros (abaixo) | 200 |
 | GET | `/v1/product/:id` | Um produto, com imagens, opções e categorias | 200 |
-| POST 🔒 | `/v1/product` | Cria (imagens em base64) | 201 |
-| PUT 🔒 | `/v1/product/:id` | Atualiza, inclusive imagens e opções | 204 |
-| DELETE 🔒 | `/v1/product/:id` | Exclui (com imagens e opções) | 204 |
+| POST  | `/v1/product` | Cria (imagens em base64) | 201 |
+| PUT  | `/v1/product/:id` | Atualiza, inclusive imagens e opções | 204 |
+| DELETE  | `/v1/product/:id` | Exclui (com imagens e opções) | 204 |
 
 **Filtros de `/v1/product/search`**
 
@@ -203,7 +200,7 @@ Pronto:
 **No navegador:** abra **http://localhost:3000/docs**.
 1. Em `POST /v1/user/token`, clique em *Try it out* e depois em *Execute* (os dados do admin já estão preenchidos).
 2. Copie o token, clique no cadeado **Authorize** e cole.
-3. Agora as rotas 🔒 também funcionam.
+3. Agora as rotas também funcionam.
 
 **No VS Code:** instale a extensão **REST Client** e abra o arquivo `requests.http`. Clique em *Send Request* em cima de cada requisição.
 
@@ -211,7 +208,6 @@ Pronto:
 ```bash
 npm test
 ```
-São 5 arquivos de teste, com 49 testes no total. Eles testam os filtros, o middleware de login e todas as rotas com os seus códigos HTTP. **Não precisam do MySQL ligado**, porque o banco é substituído por *mocks* (veja o APRENDA.md).
 
 ## 8. Decisões tomadas
 
